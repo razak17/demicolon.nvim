@@ -7,8 +7,8 @@ local nxo = { 'n', 'x', 'o' }
 local expr = { expr = true }
 
 function M.create_default_repeat_keymaps()
-  vim.keymap.set(nxo, ';', ts_repeatable_move.repeat_last_move_next)
-  vim.keymap.set(nxo, ',', ts_repeatable_move.repeat_last_move_previous)
+  vim.keymap.set(nxo, ';n', ts_repeatable_move.repeat_last_move_next, { desc = 'demicolon: next' })
+  vim.keymap.set(nxo, ';p', ts_repeatable_move.repeat_last_move_previous, { desc = 'demicolon: previous' })
 end
 
 function M.create_default_horizontal_keymaps()
