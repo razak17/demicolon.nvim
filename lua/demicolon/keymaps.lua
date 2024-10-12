@@ -8,8 +8,8 @@ local nxo = { 'n', 'x', 'o' }
 local expr = { expr = true }
 
 function M.create_default_repeat_keymaps()
-  map(nxo, ';', ts_repeatable_move.repeat_last_move_next)
-  map(nxo, ',', ts_repeatable_move.repeat_last_move_previous)
+  map(nxo, ';n', ts_repeatable_move.repeat_last_move_next)
+  map(nxo, ';p', ts_repeatable_move.repeat_last_move_previous)
 end
 
 function M.create_default_horizontal_keymaps()
