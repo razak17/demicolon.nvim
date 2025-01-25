@@ -8,8 +8,8 @@ local nxo = { 'n', 'x', 'o' }
 local expr = { expr = true }
 
 function M.create_default_repeat_keymaps()
-  map(nxo, ';', require('demicolon.repeat_jump').forward)
-  map(nxo, ',', require('demicolon.repeat_jump').backward)
+  map(nxo, ';n', require('demicolon.repeat_jump').forward)
+  map(nxo, ';p', require('demicolon.repeat_jump').backward)
 end
 
 function M.create_default_horizontal_keymaps()
