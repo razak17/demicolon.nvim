@@ -1,4 +1,4 @@
-*demicolon.txt*          For NVIM v0.8.0         Last change: 2025 February 05
+*demicolon.txt*          For NVIM v0.8.0         Last change: 2025 February 08
 
 ==============================================================================
 Table of Contents                                *demicolon-table-of-contents*
@@ -87,24 +87,24 @@ NATIVE NEOVIM MOTIONS ~
 
   --------------------------------------------------------------------------------------
   Motion          Jumps to        Help page with more information
-                  next/pevious…
+                  next/pevious…   
   --------------- --------------- ------------------------------------------------------
   ]q/[q           item in         :help ]q/:help [q
-                  quickfix list
+                  quickfix list   
 
   ]l/[l           item in         :help ]l/:help [l
-                  location list
+                  location list   
 
   ]<C-q>/[<C-q>   file in         :help ]CTRL-Q/:help [CTRL-Q
-                  quickfix list
+                  quickfix list   
 
   ]<C-l>/[<C-l>   file in         :help ]CTRL-L/:help [CTRL-L
-                  location list
+                  location list   
 
   ]z/[z           fold            :help zj/:help zk
 
   ]s/[s           spelling        :help ]s/:help [s
-                  mistake
+                  mistake         
   --------------------------------------------------------------------------------------
 
 GITSIGNS MOTIONS ~
@@ -284,7 +284,7 @@ demicolon setup if you want to use this config.
           default_keymaps = false,
           dim = true, -- Optional
         })
-
+    
         local function eyeliner_jump(key)
           local forward = vim.list_contains({ 't', 'f' }, key)
           return function()
@@ -292,10 +292,10 @@ demicolon setup if you want to use this config.
             return require('demicolon.jump').horizontal_jump(key)()
           end
         end
-
+    
         local nxo = { 'n', 'x', 'o' }
         local opts = { expr = true }
-
+    
         vim.keymap.set(nxo, 'f', eyeliner_jump('f'), opts)
         vim.keymap.set(nxo, 'F', eyeliner_jump('F'), opts)
         vim.keymap.set(nxo, 't', eyeliner_jump('t'), opts)
@@ -365,7 +365,7 @@ Click here to see the code ~
               horizontal_motions = false,
             },
           })
-
+    
           local function eyeliner_jump(key)
             local forward = vim.list_contains({ 't', 'f' }, key)
             return function()
@@ -373,10 +373,10 @@ Click here to see the code ~
               return require('demicolon.jump').horizontal_jump(key)()
             end
           end
-
+    
           local nxo = { 'n', 'x', 'o' }
           local opts = { expr = true }
-
+    
           vim.keymap.set(nxo, 'f', eyeliner_jump('f'), opts)
           vim.keymap.set(nxo, 'F', eyeliner_jump('F'), opts)
           vim.keymap.set(nxo, 't', eyeliner_jump('t'), opts)
@@ -410,9 +410,9 @@ Click here to see the code ~
         repeat_motions = false,
       },
     })
-
+    
     local nxo = { 'n', 'x', 'o' }
-
+    
     vim.keymap.set(nxo, ';', require('demicolon.repeat_jump').next)
     vim.keymap.set(nxo, ',', require('demicolon.repeat_jump').prev)
 <
