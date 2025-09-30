@@ -1,4 +1,8 @@
-local ts_repeatable_move = require('nvim-treesitter.textobjects.repeatable_move')
+-- https://github.com/mawkler/demicolon.nvim/pull/14
+local ok, ts_repeatable_move = pcall(require, 'nvim-treesitter-textobjects.repeatable_move')
+if not ok then
+  ts_repeatable_move = require('nvim-treesitter.textobjects.repeatable_move')
+end
 
 local M = {}
 
